@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "LinkedList.h"
+#include "DataStructures/LinkedList.h"
 
 int main()
 {
