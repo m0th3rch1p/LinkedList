@@ -11,8 +11,8 @@ struct LinkedList_int
     int length;
 
     void(*insert)(int index, int data, struct LinkedList_int *LinkedList);
-    void(*remove)(int index, struct LimkedList_int *LinkedList);
-    int(*retrieve)(int index, struct LimkedList_int *LinkedList);
+    void(*remove)(int index, struct LinkedList_int *LinkedList);
+    int(*retrieve)(int index, struct LinkedList_int *LinkedList);
 };
 
 

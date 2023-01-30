@@ -63,7 +63,7 @@ void insert_node_int(int index, int data, struct LinkedList_int *linked_list)
     }
     else
     {
-        struct Node_int *cursor = iterate_int(index - 1, linked_list);
+        struct Node_int *cursor = iterate(index - 1, linked_list);
         linked_list->head = node_to_insert;
         cursor->next = node_to_insert;
     }
@@ -80,7 +80,7 @@ void remove_node_int(int index, struct LinkedList_int *linked_list)
     }
     else
     {
-        struct Node_int *cursor = iterate_int(index - 1, linked_list);
+        struct Node_int *cursor = iterate(index - 1, linked_list);
         struct Node_int *node_to_remove = cursor->next;
         cursor->next = node_to_remove->next;
         destroy_node_int(node_to_remove);
@@ -90,6 +90,6 @@ void remove_node_int(int index, struct LinkedList_int *linked_list)
 
 int retreive_data_int(int index, struct LinkedList_int *linked_list)
 {
-    struct Node_int *cursor = iterate_int(index, linked_list);
+    struct Node_int *cursor = iterate(index, linked_list);
     return cursor->data;
 }
